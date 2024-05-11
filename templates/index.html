@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Media Processor</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Upload and Compress Media Files</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Image Compression</h5>
+                <form action="/upload_image" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="imageFile">Upload Image:</label>
+                        <input type="file" class="form-control-file" id="imageFile" name="file">
+                    </div>
+                    <div class="form-group">
+                        <label for="compressFactorImage">Compression Factor:</label>
+                        <select class="form-control" id="compressFactorImage" name="compress_factor">
+                            <option value="1">2x</option>
+                            <option value="2">4x</option>
+                            <option value="3">8x</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload and Compress Image</button>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Audio Compression</h5>
+                <form action="/upload_audio" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="audioFile">Upload Audio:</label>
+                        <input type="file" class="form-control-file" id="audioFile" name="file">
+                    </div>
+                    <div class="form-group">
+                        <label for="compressFactorAudio">Compression Factor:</label>
+                        <select class="form-control" id="compressFactorAudio" name="compress_factor">
+                            <option value="1">2x</option>
+                            <option value="2">4x</option>
+                            <option value="3">8x</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload and Compress Audio</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
